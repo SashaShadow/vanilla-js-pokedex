@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+body {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+    grid-template-areas: 
+    "left center right"
+    "leftc centerc rightc"
+    "lefta centera righta";
+    justify-items: center;
+    font-family: 'Press Start 2P', cursive;
+    background-image: url(https://storage.googleapis.com/subtlepatterns-production/designers/subtlepatterns/uploads/repeated-square-dark.png);
+}
+
+
+#pokedex {
+    grid-area: center;
+    width: 85%;
+    height: 100vh;
+    background: red;
+    border-style:groove;
+    border-color: grey;
+    border-radius: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#buscar {
+    align-items: start;
+    display: grid;
+    height: 85%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 5px;
+    grid-template-areas: 
+    "up up"
+    "down down";
+}
+
+#buscar p {
+    font-size: 85%;
+    padding: 5%;
+    grid-column: span 2;
+}
+
+#buscar form {
+    grid-column: span 2;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#buscar button {
+    width: 90%;
+}
+
+#buscar input {
+    width: 80%;
+}
+
+.foto {
+    margin-top: 0%;
+    width: 70%;
+    height: 45%;
+    background:aquamarine;
+    border-style: solid;
+    border-color: rgb(175, 170, 170);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.new {
+    color:rgb(117, 45, 16);
+    font-weight: bold;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: rgb(31, 12, 12);
+    background-color: slategrey;
+    margin-top: 5%;
+}
+
+.info {
+    margin-top: 15%;
+    width: 70%;
+    height: 45%;
+    background:aquamarine;
+    border-style: solid;
+    border-color: rgb(199, 188, 188);
+    grid-area: center;
+    display:none;
+}
+
+.open {
+    margin-top: 15%;
+    width: 70%;
+    height: 45%;
+    background:aquamarine;
+    border-style: solid;
+    border-color: rgb(199, 188, 188);
+    grid-area: right;
+    display: all;
+}
+
+.para {
+    height: 100%;
+}
+
+.elBoton {
+    border-radius: 7px;
+    background: black;
+    color: white;
+}
+
+.elInput {
+    border-radius: 7px;
+    margin-left: 0.4%;
+}
+
+@media screen and (max-width: 815px) {
+    #pokedex {
+        width: 115%;
+    }
+    .open {
+        grid-area: center;
+        position:absolute;
+
+        width: 70%;
+        opacity: 0.7;
+    }
+ }
+@media screen and (max-width: 767px) {
+    #pokedex {
+        width: 150%;
+    }
+    .open {
+
+        opacity: 0.7;
+    }
+ }
+
+
+@media screen and (max-width: 595px) {
+    #pokedex {
+        width: 180%;
+    }
+}
+@media screen and (max-width: 460px) {
+    #pokedex {
+      width: 200%;
+    }
+}
+
+    @media screen and (max-width: 360px) {
+        #pokedex {
+            width: 50vh;
+        }
+    }
+
